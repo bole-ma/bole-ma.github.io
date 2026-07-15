@@ -2,7 +2,7 @@
 
 This repository contains the source code and data for my personal academic website, built using Jekyll and hosted via GitHub Pages. 
 
-👉 **Live Version:** [jokermbl.github.io](https://jokermbl.github.io)
+👉 **Live Version:** [jokermbl.github.io](https://bole-ma.github.io)
 
 ---
 
