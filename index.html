@@ -39,8 +39,8 @@
     .news-list { margin:0; padding:0; list-style:none; }
     .news-list li { display:grid; grid-template-columns:105px 1fr; column-gap:16px; padding:5px 0; }
     .news-date { color:var(--muted); white-space:nowrap; }
-    .research-group { margin:30px 0 16px; font-size:18px; font-weight:700; color:var(--heading); }
-    .research-group:first-of-type { margin-top:8px; }
+    .research-focus { margin:0 0 22px; }
+    .publication-heading { margin:0 0 12px; }
     .pub-role { color:#586168; font-size:14px; margin:7px 0 0; }
     .pub-list { list-style:none; padding:0; margin:0; }
     .pub-list li { display:grid; grid-template-columns:180px minmax(0,1fr); gap:20px; padding:19px 0; border-bottom:1px solid var(--rule); }
@@ -89,52 +89,39 @@
           <li><span class="news-date">Apr 2026</span><span><a href="https://arxiv.org/abs/2604.00225" target="_blank" rel="noopener noreferrer">Pupil Design for Computational Wavefront Estimation</a> is available as a preprint.</span></li>
           <li><span class="news-date">Mar 2026</span><span>Led Purdue's student team in the DARPA CIDAR Challenge; the team was among five semifinal prize recipients.</span></li>
           <li><span class="news-date">Jan 2026</span><span><a href="https://yuyuanspace.com/NewtonGen/" target="_blank" rel="noopener noreferrer">NewtonGen</a> was accepted to ICLR 2026 (co-author).</span></li>
-          <li><span class="news-date">Sep 2025</span><span>Two papers on personalized face restoration appeared at <a href="https://doi.org/10.1109/ICIP55913.2025.11084394" target="_blank" rel="noopener noreferrer">ICIP 2025</a> and <a href="https://cmsworkshops.com/ICIP2025/view_paper.php?PaperNum=2952" target="_blank" rel="noopener noreferrer">ICIP Workshops 2025</a> (co-author).</span></li>
+          <li><span class="news-date">Sep 2025</span><span>A paper I co-authored on personalized face restoration appeared at <a href="https://doi.org/10.1109/ICIP55913.2025.11084394" target="_blank" rel="noopener noreferrer">ICIP 2025</a>.</span></li>
           <li><span class="news-date">Oct 2023</span><span>My first-author paper on complex wavefront retrieval was published in <a href="https://doi.org/10.1364/OL.499624" target="_blank" rel="noopener noreferrer"><em>Optics Letters</em></a>.</span></li>
         </ul>
       </section>
 
       <section id="research" aria-labelledby="research-heading">
         <h2 id="research-heading">Research</h2>
-        <h3 class="research-group">Computational Imaging and Wavefront Sensing</h3>
+        <p class="research-focus">My current doctoral research focuses on monocular metric depth estimation. More broadly, I am interested in reliable 3D visual perception for systems that interact with the physical world.</p>
+        <h3 class="publication-heading">Publications</h3>
         <ul class="pub-list">
+          <li>
+            <img class="pub-thumb" src="https://arxiv.org/html/2512.04924v1/Fig1_teaser.png" alt="Markov-renewal LiDAR simulation overview figure" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
+            <div><a class="pub-title" href="https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/6894.pdf" target="_blank" rel="noopener noreferrer">Markov-Renewal Single-Photon LiDAR Simulator</a><div class="pub-authors">Weijian Zhang, Prateek Chennuri, Hashan K. Weerasooriya, <strong>Bole Ma</strong>, Stanley H. Chan</div><div class="pub-venue">European Conference on Computer Vision (ECCV), 2026</div><div class="pub-links"><a href="https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/6894.pdf" target="_blank" rel="noopener noreferrer">Paper</a><a href="https://link.springer.com/chapter/10.1007/978-3-032-37359-5_11" target="_blank" rel="noopener noreferrer">Publisher</a></div></div>
+          </li>
+          <li>
+            <img class="pub-thumb" src="https://yuyuanspace.com/NewtonGen/static/images/framework.png" alt="NewtonGen framework figure" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
+            <div><a class="pub-title" href="https://yuyuanspace.com/NewtonGen/" target="_blank" rel="noopener noreferrer">NewtonGen: Physics-Consistent and Controllable Text-to-Video Generation via Neural Newtonian Dynamics</a><div class="pub-authors">Yu Yuan, Xijun Wang, Tharindu Wickremasinghe, Zeeshan Nadir, <strong>Bole Ma</strong>, Stanley H. Chan</div><div class="pub-venue">International Conference on Learning Representations (ICLR), 2026</div><div class="pub-links"><a href="https://yuyuanspace.com/NewtonGen/" target="_blank" rel="noopener noreferrer">Project</a><a href="https://openreview.net/pdf?id=rJ6N6sunaU" target="_blank" rel="noopener noreferrer">Paper</a><a href="https://github.com/pandayuanyu/NewtonGen" target="_blank" rel="noopener noreferrer">Code</a></div></div>
+          </li>
           <li>
             <img class="pub-thumb" src="https://arxiv.org/html/2604.00225v1/figures/overview_figure.png" alt="Pupil design and wavefront estimation overview figure" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
             <div><a class="pub-title" href="https://arxiv.org/abs/2604.00225" target="_blank" rel="noopener noreferrer">Pupil Design for Computational Wavefront Estimation</a><div class="pub-authors">Ali Almuallem, Nicholas Chimitt, <strong>Bole Ma</strong>, Qi Guo, Stanley H. Chan</div><div class="pub-venue">arXiv preprint, 2026</div><div class="pub-role">My contribution: optical setup, data collection, and experimental analysis.</div><div class="pub-links"><a href="https://arxiv.org/abs/2604.00225" target="_blank" rel="noopener noreferrer">arXiv</a></div></div>
           </li>
           <li>
-            <img class="pub-thumb" src="publication-placeholder.svg" alt="Paper figure pending for complex wavefront retrieval" loading="lazy">
-            <div><a class="pub-title" href="https://doi.org/10.1364/OL.499624" target="_blank" rel="noopener noreferrer">Imaging Process Matched Neural Network for Complex Wavefront Retrieval with a Higher Space–Bandwidth Product</a><div class="pub-authors"><strong>Bole Ma</strong>, Chuxuan Huang, Sibing Hou, Haiyu Zhang, Manhua Liu, Hao Yan</div><div class="pub-venue">Optics Letters, 48(20), 5399–5402, 2023 · First author</div><div class="pub-links"><a href="https://doi.org/10.1364/OL.499624" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
-          </li>
-          <li>
-            <img class="pub-thumb" src="publication-placeholder.svg" alt="Paper figure pending for dual-wavelength digital holography" loading="lazy">
-            <div><a class="pub-title" href="https://doi.org/10.1117/12.2667077" target="_blank" rel="noopener noreferrer">3D Measurement of Rough Objects Based on Dual Wavelength Digital Holography</a><div class="pub-authors">Haiyu Zhang, Sibing Hou, <strong>Bole Ma</strong>, Ping Cai, Jiamiao Yang, Hao Yan</div><div class="pub-venue">International Conference on Optical and Photonic Engineering (icOPEN 2022), proceedings published 2023</div><div class="pub-links"><a href="https://doi.org/10.1117/12.2667077" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
-          </li>
-        </ul>
-        <h3 class="research-group">Physical Models for Vision and Sensing</h3>
-        <ul class="pub-list">
-          <li>
-            <img class="pub-thumb" src="https://yuyuanspace.com/NewtonGen/static/images/framework.png" alt="NewtonGen framework figure" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
-            <div><a class="pub-title" href="https://yuyuanspace.com/NewtonGen/" target="_blank" rel="noopener noreferrer">NewtonGen: Physics-Consistent and Controllable Text-to-Video Generation via Neural Newtonian Dynamics</a><div class="pub-authors">Yu Yuan, Xijun Wang, Tharindu Wickremasinghe, Zeeshan Nadir, <strong>Bole Ma</strong>, Stanley H. Chan</div><div class="pub-venue">ICLR 2026</div><div class="pub-links"><a href="https://yuyuanspace.com/NewtonGen/" target="_blank" rel="noopener noreferrer">Project</a><a href="https://arxiv.org/abs/2509.21309" target="_blank" rel="noopener noreferrer">Paper</a><a href="https://github.com/pandayuanyu/NewtonGen" target="_blank" rel="noopener noreferrer">Code</a></div></div>
-          </li>
-          <li>
-            <img class="pub-thumb" src="https://arxiv.org/html/2512.04924v1/Fig1_teaser.png" alt="Markov-renewal LiDAR simulation overview figure" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
-            <div><a class="pub-title" href="https://arxiv.org/abs/2512.04924" target="_blank" rel="noopener noreferrer">Markov-Renewal Single-Photon LiDAR Simulator</a><div class="pub-authors">Weijian Zhang, Prateek Chennuri, Hashan K. Weerasooriya, <strong>Bole Ma</strong>, Stanley H. Chan</div><div class="pub-venue">arXiv preprint, 2025</div><div class="pub-links"><a href="https://arxiv.org/abs/2512.04924" target="_blank" rel="noopener noreferrer">arXiv</a></div></div>
-          </li>
-        </ul>
-        <h3 class="research-group">Generative Image Restoration</h3>
-        <ul class="pub-list">
-          <li>
             <img class="pub-thumb" src="https://xijun-w.github.io/images/blind_face_arc_1.png" alt="Generative personalized blind face restoration preview from the first author's website" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
             <div><a class="pub-title" href="https://doi.org/10.1109/ICIP55913.2025.11084394" target="_blank" rel="noopener noreferrer">Generative Personalized Blind Face Restoration Enhanced by Physical Identity</a><div class="pub-authors">Xijun Wang, Xingguang Zhang, Yu Yuan, <strong>Bole Ma</strong>, Prateek Chennuri, Stanley H. Chan</div><div class="pub-venue">IEEE International Conference on Image Processing (ICIP), 2025</div><div class="pub-links"><a href="https://doi.org/10.1109/ICIP55913.2025.11084394" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
           </li>
           <li>
-            <img class="pub-thumb" src="publication-placeholder.svg" alt="Paper figure pending for Generative Face Restoration" loading="lazy">
-            <div><a class="pub-title" href="https://cmsworkshops.com/ICIP2025/view_paper.php?PaperNum=2952" target="_blank" rel="noopener noreferrer">Generative Face Restoration Via Gallery and Physical Identity Cues</a><div class="pub-authors">Xijun Wang, Xingguang Zhang, Yu Yuan, <strong>Bole Ma</strong>, Prateek Chennuri, Stanley H. Chan</div><div class="pub-venue">IEEE International Conference on Image Processing Workshops (ICIPW), 2025</div><div class="pub-links"><a href="https://cmsworkshops.com/ICIP2025/view_paper.php?PaperNum=2952" target="_blank" rel="noopener noreferrer">Conference page</a></div></div>
+            <img class="pub-thumb" src="images/optics-letters-preview.png" alt="Network architecture and wavefront imaging setup from the Optics Letters paper" loading="lazy">
+            <div><a class="pub-title" href="https://doi.org/10.1364/OL.499624" target="_blank" rel="noopener noreferrer">Imaging process matched neural network for complex wavefront retrieval with a higher space–bandwidth product</a><div class="pub-authors"><strong>Bole Ma</strong>, Chuxuan Huang, Sibing Hou, Haiyu Zhang, Manhua Liu, Hao Yan</div><div class="pub-venue"><em>Optics Letters</em>, 48(20), 5399–5402, 2023 · First author</div><div class="pub-links"><a href="https://doi.org/10.1364/OL.499624" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
           </li>
           <li>
-            <img class="pub-thumb" src="https://genai-restore.github.io/DiffPGD/static/images/Figures/Intuition_2.png" alt="Personalized low-light image denoising concept figure" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
-            <div><a class="pub-title" href="https://genai-restore.github.io/DiffPGD/" target="_blank" rel="noopener noreferrer">Personalized Generative Low-Light Image Denoising and Enhancement</a><div class="pub-authors">Xijun Wang, Prateek Chennuri, Dilshan Godaliyadda, Yu Yuan, <strong>Bole Ma</strong>, Xingguang Zhang, Hamid R. Sheikh, Stanley H. Chan</div><div class="pub-venue">arXiv preprint, 2024</div><div class="pub-links"><a href="https://genai-restore.github.io/DiffPGD/" target="_blank" rel="noopener noreferrer">Project</a><a href="https://arxiv.org/abs/2412.14327" target="_blank" rel="noopener noreferrer">arXiv</a></div></div>
+            <img class="pub-thumb" src="images/dual-wavelength-holography-preview.png" alt="Dual-wavelength digital holography setup and measured objects" loading="lazy">
+            <div><a class="pub-title" href="https://doi.org/10.1117/12.2667077" target="_blank" rel="noopener noreferrer">3D measurement of rough objects based on dual wavelength digital holography</a><div class="pub-authors">Haiyu Zhang, Sibing Hou, <strong>Bole Ma</strong>, Ping Cai, Jiamiao Yang, Hao Yan</div><div class="pub-venue"><em>Proceedings of SPIE</em>, 12550, International Conference on Optical and Photonic Engineering (icOPEN 2022), 2023</div><div class="pub-links"><a href="https://doi.org/10.1117/12.2667077" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
           </li>
         </ul>
       </section>
