@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="210" viewBox="0 0 360 210" role="img" aria-labelledby="title desc">
+  <title id="title">Paper figure pending</title>
+  <desc id="desc">Neutral placeholder for a publication figure that has not yet been supplied.</desc>
+  <rect width="360" height="210" fill="#f6f7f7"/>
+  <rect x="111" y="39" width="138" height="132" rx="2" fill="#fff" stroke="#d6dcdf" stroke-width="2"/>
+  <path d="M132 72h97M132 86h97M132 100h75" stroke="#d6dcdf" stroke-width="4" stroke-linecap="round"/>
+  <rect x="132" y="119" width="97" height="30" fill="#e7ecee"/>
+  <text x="180" y="193" fill="#7e888e" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Paper figure to add</text>
+</svg>
