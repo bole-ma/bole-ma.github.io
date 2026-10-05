@@ -54,6 +54,11 @@
     h3 { font-size:18px; margin:0 0 5px; }
     p { margin:0 0 15px; }
     .availability { color:#a44539; font-weight:700; }
+    .internship-contact { display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; margin-top:6px; }
+    .internship-contact p { margin:0; color:var(--muted); }
+    .email-button { display:inline-flex; align-items:center; justify-content:center; padding:9px 18px; border-radius:5px; background:var(--link); color:#fff; font-weight:600; text-decoration:none; }
+    .email-button:hover { background:#175c76; color:#fff; }
+    .email-button:focus-visible { outline:3px solid #175c76; outline-offset:3px; }
     .news-list { margin:0; padding:0; list-style:none; }
     .news-list li { display:grid; grid-template-columns:105px 1fr; column-gap:16px; padding:5px 0; }
     .news-date { color:var(--muted); white-space:nowrap; }
@@ -79,7 +84,7 @@
   </style>
 </head>
 <body>
-  <header class="site-header"><div class="wrap"><a class="site-title" href="#top">Bole Ma</a><nav class="site-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#news">News</a><a href="#research">Research</a><a href="#education">Education</a><a href="/cv/">CV</a></nav></div></header>
+  <header class="site-header"><div class="wrap"><a class="site-title" href="#top">Bole Ma</a><nav class="site-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#news">News</a><a href="#publications">Publications</a><a href="/research/">Research</a><a href="#education">Education</a><a href="/cv/">CV</a></nav></div></header>
   <div class="wrap layout" id="top">
     <aside aria-label="Profile">
       <img class="portrait" src="images/profile%20photo.JPG" alt="Bole Ma" loading="eager">
@@ -98,7 +103,11 @@
         <h1 id="about-heading">About Me</h1>
         <p>I am a Ph.D. student in Electrical and Computer Engineering at <a href="https://engineering.purdue.edu/ECE" target="_blank" rel="noopener noreferrer">Purdue University</a>, advised by <a href="https://engineering.purdue.edu/ChanGroup/stanleychan.html" target="_blank" rel="noopener noreferrer">Professor Stanley Chan</a> in the <a href="https://engineering.purdue.edu/ChanGroup/index.html" target="_blank" rel="noopener noreferrer">Intelligent Imaging Lab</a>. I received my B.S. and M.S. degrees from Shanghai Jiao Tong University.</p>
         <p>My research interests are in computer vision, geometric perception, and computational imaging. I am especially interested in practical perception problems where physical structure can make learned models more interpretable and reliable. My current doctoral research focuses on monocular metric depth estimation and uncertainty for 3D perception.</p>
-        <p><span class="availability">I am seeking research and engineering internships for Summer 2027.</span> Please feel free to <a href="mailto:jokermbl324@gmail.com">get in touch</a>.</p>
+        <p class="availability">Seeking Summer 2027 internships in computer vision, 3D perception, and machine learning research and engineering.</p>
+        <div class="internship-contact">
+          <p>Available from May 2027.</p>
+          <a class="email-button" href="mailto:jokermbl324@gmail.com">Email me</a>
+        </div>
       </section>
 
       <section id="news" aria-labelledby="news-heading">
@@ -114,10 +123,8 @@
         </ul>
       </section>
 
-      <section id="research" aria-labelledby="research-heading">
-        <h2 id="research-heading">Research</h2>
-        <p class="research-focus">My current doctoral research focuses on monocular metric depth estimation. More broadly, I am interested in reliable 3D visual perception for systems that interact with the physical world.</p>
-        <h3 class="publication-heading">Publications</h3>
+      <section id="publications" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Publications</h2>
         <ul class="pub-list">
           <li>
             <img class="pub-thumb" src="images/lidar-preview.png" alt="Markov-renewal LiDAR simulation overview figure" loading="lazy" onerror="this.onerror=null;this.src='publication-placeholder.svg'">
