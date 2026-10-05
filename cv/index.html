@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View and download Bole Ma's curriculum vitae.">
+  <title>CV - Bole Ma</title>
+  <style>
+    :root { --text:#3d4145; --heading:#292d31; --muted:#6d747a; --link:#287c9a; --rule:#e6e9eb; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#fff; color:var(--text); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+    a { color:var(--link); text-decoration:underline; text-decoration-color:#b7d1d9; text-underline-offset:2px; }
+    a:hover { color:#175c76; text-decoration-color:currentColor; }
+    .wrap { width:min(1190px,calc(100% - 48px)); margin-inline:auto; }
+    .site-header { border-bottom:1px solid var(--rule); }
+    .site-header .wrap { display:flex; min-height:69px; align-items:center; gap:52px; }
+    .site-title { color:#4b5156; font-weight:700; font-size:15px; text-decoration:none; white-space:nowrap; }
+    .site-nav { display:flex; flex-wrap:wrap; gap:30px; }
+    .site-nav a { color:#697178; font-size:14px; text-decoration:none; }
+    .site-nav a:hover { color:var(--link); }
+    .layout { display:grid; grid-template-columns:220px minmax(0,1fr); gap:54px; padding-top:44px; padding-bottom:80px; }
+    aside { font-size:14px; }
+    .portrait { display:block; width:180px; height:180px; object-fit:cover; object-position:center; border-radius:50%; margin-bottom:15px; background:#f1f3f3; }
+    .profile-name { font-size:19px; font-weight:700; line-height:1.2; color:var(--heading); margin:0 0 7px; }
+    .profile-role { margin:0 0 17px; color:var(--muted); font-size:13px; line-height:1.5; }
+    .profile-links { list-style:none; margin:0; padding:0; }
+    .profile-links li { margin:6px 0; }
+    .profile-links a { display:inline-flex; align-items:center; gap:8px; color:#4d5961; text-decoration:none; }
+    .profile-icon { width:16px; height:16px; flex:0 0 16px; }
+    .profile-links a:hover { color:var(--link); text-decoration:underline; }
+    main { max-width:890px; min-width:0; }
+    section { scroll-margin-top:28px; margin-bottom:50px; }
+    h1,h2,h3 { color:var(--heading); line-height:1.25; }
+    h1 { margin:0 0 14px; font-size:31px; letter-spacing:-.025em; }
+    h2 { font-size:25px; margin:0 0 18px; padding-bottom:8px; border-bottom:1px solid var(--rule); }
+    h3 { font-size:18px; margin:0 0 5px; }
+    p { margin:0 0 15px; }
+    .availability { color:#a44539; font-weight:700; }
+    .news-list { margin:0; padding:0; list-style:none; }
+    .news-list li { display:grid; grid-template-columns:105px 1fr; column-gap:16px; padding:5px 0; }
+    .news-date { color:var(--muted); white-space:nowrap; }
+    .research-focus { margin:0 0 22px; }
+    .publication-heading { margin:0 0 12px; }
+    .pub-role { color:#586168; font-size:14px; margin:7px 0 0; }
+    .pub-list { list-style:none; padding:0; margin:0; }
+    .pub-list li { display:grid; grid-template-columns:180px minmax(0,1fr); gap:20px; padding:19px 0; border-bottom:1px solid var(--rule); }
+    .pub-list li:first-child { padding-top:4px; }
+    .pub-list li:last-child { border-bottom:0; }
+    .pub-thumb { display:block; width:180px; height:110px; object-fit:contain; background:#f6f7f7; border:1px solid var(--rule); }
+    .pub-title { display:block; font-size:17px; line-height:1.35; font-weight:700; color:var(--heading); margin-bottom:4px; text-decoration:none; }
+    .pub-title:hover { color:var(--link); text-decoration:underline; }
+    .pub-authors,.pub-venue,.pub-links { font-size:14px; line-height:1.5; margin-bottom:4px; }
+    .pub-venue { color:var(--muted); font-style:italic; }
+    .pub-links a { margin-right:12px; }
+    .education-list { list-style:none; padding:0; margin:0; }
+    .education-list li { margin-bottom:13px; }
+    footer { border-top:1px solid var(--rule); padding:21px 0; color:var(--muted); font-size:12px; }
+    @media(max-width:760px) { .site-header .wrap { min-height:auto; padding-block:14px; display:block; } .site-nav { margin-top:8px; gap:17px; } .layout { grid-template-columns:1fr; gap:30px; padding-top:30px; } aside { display:grid; grid-template-columns:110px 1fr; column-gap:19px; align-items:start; } .portrait { width:110px; height:110px; grid-row:span 3; } .profile-links { display:flex; flex-wrap:wrap; gap:2px 13px; } .profile-links li { margin:0; } }
+    @media(max-width:480px) { .wrap { width:calc(100% - 32px); } body { font-size:15px; } .news-list li { grid-template-columns:1fr; padding:7px 0; } .news-date { font-size:13px; } h1 { font-size:28px; } h2 { font-size:23px; } .pub-list li { grid-template-columns:1fr; gap:9px; } .pub-thumb { width:180px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    .site-nav a[aria-current="page"] { color:var(--link); font-weight:700; }
+    .cv-actions { display:flex; flex-wrap:wrap; gap:10px 24px; margin-bottom:20px; }
+    .cv-preview { display:block; width:100%; height:auto; border:1px solid var(--rule); margin-bottom:20px; }
+    
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="wrap"><a class="site-title" href="/#top">Bole Ma</a><nav class="site-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/#news">News</a><a href="/#research">Research</a><a href="/#education">Education</a><a href="/cv/" aria-current="page">CV</a></nav></div></header>
+  <div class="wrap layout" id="top">
+    <aside aria-label="Profile">
+      <img class="portrait" src="/images/profile%20photo.JPG" alt="Bole Ma" loading="eager">
+      <div class="profile-name">Bole Ma</div>
+      <p class="profile-role">Ph.D. Student<br>Purdue University</p>
+      <ul class="profile-links">
+        <li><a href="mailto:ma929@purdue.edu"><svg class="profile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Email</span></a></li>
+        <li><a href="https://www.linkedin.com/in/bole-ma-284593293/" target="_blank" rel="noopener noreferrer"><svg class="profile-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.46 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.29 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.8-1.52 3 0 3.57 1.98 3.57 4.55v5.22Z"/></svg><span>LinkedIn</span></a></li>
+        <li><a href="https://scholar.google.com/citations?user=aAl1MAYAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer"><svg class="profile-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2 0 10l4.5 3V19H6v-5l6 4 12-8L12 2Z"/><path d="M7 16.5 12 20l5-3.5V20c-2.7 2-7.3 2-10 0v-3.5Z"/></svg><span>Google Scholar</span></a></li>
+        <li><a href="https://orcid.org/0009-0007-0417-3979" target="_blank" rel="noopener noreferrer"><svg class="profile-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="12" fill="currentColor"/><circle cx="6.8" cy="6.8" r="1.1" fill="white"/><path d="M6.8 9v8M10.5 8.7H13a4.3 4.3 0 0 1 0 8.6h-2.5V8.7Z" fill="none" stroke="white" stroke-width="1.7"/></svg><span>ORCID</span></a></li>
+      </ul>
+    </aside>
+    <main>
+      <section aria-labelledby="cv-heading">
+        <h1 id="cv-heading">CV</h1>
+        <div class="cv-actions">
+          <a href="/files/Bole_Ma_CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
+          <a href="/files/Bole_Ma_CV.pdf" download="Bole_Ma_CV.pdf">Download CV</a>
+        </div>
+        <img class="cv-preview" src="/files/cv-page-1.png" alt="Bole Ma CV, page 1: education, technical skills, and research experience">
+        <img class="cv-preview" src="/files/cv-page-2.png" alt="Bole Ma CV, page 2: prior research, publications, and awards" loading="lazy">
+      </section>
+    </main>
+  </div>
+  <footer><div class="wrap">© <span id="year">2026</span> Bole Ma</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
