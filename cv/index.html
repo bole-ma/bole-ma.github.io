@@ -87,11 +87,21 @@
           <a href="/files/Bole_Ma_CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
           <a href="/files/Bole_Ma_CV.pdf" download="Bole_Ma_CV.pdf">Download CV</a>
         </div>
-        <embed class="cv-preview" src="/files/Bole_Ma_CV.pdf#toolbar=1&amp;navpanes=1&amp;view=FitH" type="application/pdf" title="Bole Ma CV — PDF reader">
+        <embed class="cv-preview" data-pdf-path="/files/Bole_Ma_CV.pdf" type="application/pdf" title="Bole Ma CV — PDF reader">
       </section>
     </main>
   </div>
   <footer><div class="wrap">© <span id="year">2026</span> Bole Ma</div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const reader = document.querySelector('.cv-preview');
+    const pdfUrl = new URL(reader.dataset.pdfPath, window.location.origin);
+    pdfUrl.searchParams.set('v', Date.now().toString());
+    document.querySelectorAll('.cv-actions a').forEach(link => {
+      link.href = pdfUrl.href;
+    });
+    pdfUrl.hash = 'toolbar=1&navpanes=1&view=FitH';
+    reader.src = pdfUrl.href;
+  </script>
 </body>
 </html>
