@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="View and download Bole Ma's curriculum vitae.">
-  <title>CV - Bole Ma</title>
+  <meta name="description" content="Research projects by Bole Ma in monocular metric depth estimation, passive ranging, and computational wavefront estimation.">
+  <title>Research - Bole Ma</title>
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-bm-32.png">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon-bm.png">
-  <link rel="canonical" href="https://bole-ma.github.io/cv/">
+  <link rel="canonical" href="https://bole-ma.github.io/research/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bole Ma">
-  <meta property="og:title" content="CV - Bole Ma">
+  <meta property="og:title" content="Research - Bole Ma">
   <meta property="og:description" content="Bole Ma — Purdue Ph.D. student in computer vision, geometric perception, and computational imaging. Seeking Summer 2027 internships.">
-  <meta property="og:url" content="https://bole-ma.github.io/cv/">
+  <meta property="og:url" content="https://bole-ma.github.io/research/">
   <meta property="og:image" content="https://bole-ma.github.io/images/social-preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Bole Ma, Purdue University — Computer Vision and Geometric Perception">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CV - Bole Ma">
+  <meta name="twitter:title" content="Research - Bole Ma">
   <meta name="twitter:description" content="Bole Ma — Purdue Ph.D. student in computer vision, geometric perception, and computational imaging. Seeking Summer 2027 internships.">
   <meta name="twitter:image" content="https://bole-ma.github.io/images/social-preview.png">
   <style>
@@ -78,15 +78,19 @@
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
     .site-nav a[aria-current="page"] { color:var(--link); font-weight:700; }
     .cv-actions { display:flex; flex-wrap:wrap; gap:10px 24px; margin-bottom:20px; }
-    .cv-contact { margin-bottom:20px; color:var(--muted); font-size:14px; }
-    .cv-contact a { margin-left:12px; }
     .cv-preview { display:block; width:100%; height:80vh; min-height:620px; border:1px solid var(--rule); background:#292929; }
     @media(max-width:760px) { .cv-preview { height:75vh; min-height:480px; } }
     
+    .project-meta { color:var(--muted); font-size:14px; margin-bottom:18px; }
+    .project h2 { margin-bottom:10px; font-size:23px; }
+    .project p { max-width:78ch; }
+    .project-links { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:18px; }
+    .project-jump { display:flex; flex-wrap:wrap; gap:10px 24px; margin:22px 0 38px; font-size:14px; }
+    .project { margin-bottom:48px; }
   </style>
 </head>
 <body>
-  <header class="site-header"><div class="wrap"><a class="site-title" href="/#top">Bole Ma</a><nav class="site-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/#news">News</a><a href="/#publications">Publications</a><a href="/research/">Research</a><a href="/#education">Education</a><a href="/cv/" aria-current="page">CV</a></nav></div></header>
+  <header class="site-header"><div class="wrap"><a class="site-title" href="/#top">Bole Ma</a><nav class="site-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/#news">News</a><a href="/#publications">Publications</a><a href="/research/" aria-current="page">Research</a><a href="/#education">Education</a><a href="/cv/">CV</a></nav></div></header>
   <div class="wrap layout" id="top">
     <aside aria-label="Profile">
       <img class="portrait" src="/images/profile%20photo.JPG" alt="Bole Ma" loading="eager">
@@ -101,28 +105,50 @@
       </ul>
     </aside>
     <main>
-      <section aria-labelledby="cv-heading">
-        <h1 id="cv-heading">CV</h1>
-        <div class="cv-actions">
-          <a href="/files/Bole_Ma_CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
-          <a href="/files/Bole_Ma_CV.pdf" download="Bole_Ma_CV.pdf">Download CV</a>
+      <h1>Research</h1>
+      <nav class="project-jump" aria-label="Research projects">
+        <a href="#depth">Monocular Depth</a>
+        <a href="#cidar">DARPA CIDAR</a>
+        <a href="#pupil">Pupil Design</a>
+      </nav>
+
+      <section class="project" id="depth" aria-labelledby="depth-heading">
+        <h2 id="depth-heading">Geometry-Guided Monocular Metric Depth Estimation</h2>
+        <p class="project-meta">Independent doctoral research · Purdue University · Jan 2026–present · Ongoing</p>
+        <p>Estimating distance in meters from a single RGB image is an ambiguous problem. My doctoral research explores how explicit camera geometry can support interpretable metric depth estimation for robotic and UAV perception.</p>
+        <p><strong>My work.</strong> I designed and implemented the depth-estimation framework and built a training pipeline that produces metric depth maps. I also conduct controlled intervention experiments to understand how intermediate predictions affect the final depth output and use these observations to guide model refinement.</p>
+        <p><strong>Data and experimentation.</strong> I designed a data-curation strategy using approximately 4.72 million TartanAir v2 frames, balancing scene coverage and camera-geometry diversity while reducing redundant observations. Training subsets support iterative experimentation within a single-A100 compute budget.</p>
+        <p><strong>Current progress.</strong> The training pipeline is operational and produces metric depth maps. Model refinement and systematic performance evaluation are ongoing.</p>
+      </section>
+
+      <section class="project" id="cidar" aria-labelledby="cidar-heading">
+        <h2 id="cidar-heading">DARPA CIDAR Challenge</h2>
+        <p class="project-meta">Student Project Lead · Purdue University · Jan 2025–Jun 2026</p>
+        <p>The DARPA Computational Imaging Detection and Ranging (CIDAR) Challenge investigates passive image-based methods for high-accuracy, low-latency distance estimation. The challenge provided an opportunity to turn an open-ended perception problem into a working ranging approach under limited data and experimental constraints.</p>
+        <p><strong>My work.</strong> I organized and analyzed the available data and investigated infrared-absorption, stereo-vision, and monocular depth-estimation approaches. I assessed their data requirements and feasibility to guide the team's method selection.</p>
+        <p><strong>Prototyping and method development.</strong> I operated a UAV to collect approximately 1,000 images, calibrated and organized the dataset, and trained a compact U-Net prototype. The experiments identified domain shift as a limitation of training solely on locally collected data. I subsequently developed a camera-geometry-based approach for passive distance estimation.</p>
+        <p><strong>Outcome.</strong> Purdue was one of five semifinal awardees. The team received a $200,000 white-paper award and a $50,000 semifinal award. The practical limitations encountered in this project helped motivate my subsequent doctoral research in monocular metric depth estimation.</p>
+        <div class="project-links">
+          <a href="https://www.darpa.mil/research/challenges/cidar/about" target="_blank" rel="noopener noreferrer">DARPA Challenge</a>
+          <a href="https://engineering.purdue.edu/ECE/News/2026/purdue-ece-team-advances-in-darpa-imaging-challenge" target="_blank" rel="noopener noreferrer">Purdue News</a>
         </div>
-        <p class="cv-contact">Available from May 2027. <a href="mailto:jokermbl324@gmail.com">Email me</a></p>
-        <embed class="cv-preview" data-pdf-path="/files/Bole_Ma_CV.pdf" type="application/pdf" title="Bole Ma CV — PDF reader">
+      </section>
+
+      <section class="project" id="pupil" aria-labelledby="pupil-heading">
+        <h2 id="pupil-heading">Pupil Design for Computational Wavefront Estimation</h2>
+        <p class="project-meta">Optical system design and experimental data acquisition · Purdue University · Jan–Apr 2026</p>
+        <p>Different wavefront phases can produce indistinguishable point spread functions (PSFs), making phase recovery ambiguous. This collaborative project investigates asymmetric pupil designs that improve wavefront recoverability from intensity measurements.</p>
+        <p><strong>My work.</strong> I designed, assembled, debugged, and refined the physical optical testbed, including component selection, optical alignment, and troubleshooting. My contribution focused on implementing the experimental system and acquiring real measurements for the team's computational study.</p>
+        <p><strong>Experimental data.</strong> I collected more than 3,000 real PSF images; 2,500 were selected for the final experiments. The measurements supported subsequent neural-network fine-tuning and wavefront reconstruction by collaborators.</p>
+        <p><strong>Outcome.</strong> The paper was accepted to <em>Optics Express</em> in September 2026. The preprint and project materials are available below.</p>
+        <div class="project-links">
+          <a href="https://stanleychangroup.github.io/WavefrontPupilDesign/" target="_blank" rel="noopener noreferrer">Project</a>
+          <a href="https://arxiv.org/abs/2604.00225" target="_blank" rel="noopener noreferrer">Preprint</a>
+        </div>
       </section>
     </main>
   </div>
   <footer><div class="wrap">© <span id="year">2026</span> Bole Ma · Last updated: <time datetime="2026-10-05">October 5, 2026</time></div></footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const reader = document.querySelector('.cv-preview');
-    const pdfUrl = new URL(reader.dataset.pdfPath, window.location.origin);
-    pdfUrl.searchParams.set('v', Date.now().toString());
-    document.querySelectorAll('.cv-actions a[href^="/files/"]').forEach(link => {
-      link.href = pdfUrl.href;
-    });
-    pdfUrl.hash = 'toolbar=1&navpanes=1&view=FitH';
-    reader.src = pdfUrl.href;
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
