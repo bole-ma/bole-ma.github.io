@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Research projects in geometric perception, passive ranging, and computational imaging.">
-  <title>Research - Bole Ma</title>
+  <meta name="description" content="Ongoing doctoral research in geometry-guided monocular metric depth estimation.">
+  <title>Monocular Metric Depth - Bole Ma</title>
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-bm-32.png">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon-bm.png">
-  <link rel="canonical" href="https://bole-ma.github.io/research/">
+  <link rel="canonical" href="https://bole-ma.github.io/research/depth/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bole Ma">
-  <meta property="og:title" content="Research - Bole Ma">
-  <meta property="og:description" content="Research projects in geometric perception, passive ranging, and computational imaging.">
-  <meta property="og:url" content="https://bole-ma.github.io/research/">
+  <meta property="og:title" content="Monocular Metric Depth - Bole Ma">
+  <meta property="og:description" content="Ongoing doctoral research in geometry-guided monocular metric depth estimation.">
+  <meta property="og:url" content="https://bole-ma.github.io/research/depth/">
   <meta property="og:image" content="https://bole-ma.github.io/images/social-preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Bole Ma, Purdue University — Computer Vision and Geometric Perception">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Research - Bole Ma">
-  <meta name="twitter:description" content="Research projects in geometric perception, passive ranging, and computational imaging.">
+  <meta name="twitter:title" content="Monocular Metric Depth - Bole Ma">
+  <meta name="twitter:description" content="Ongoing doctoral research in geometry-guided monocular metric depth estimation.">
   <meta name="twitter:image" content="https://bole-ma.github.io/images/social-preview.png">
   <style>
     :root { --text:#3d4145; --heading:#292d31; --muted:#6d747a; --link:#287c9a; --rule:#e6e9eb; }
@@ -106,31 +106,15 @@
       </ul>
     </aside>
     <main>
-      <h1>Research</h1>
-      <p class="research-intro">Selected projects in visual perception and computational imaging, from geometric model development to field experiments and optical systems.</p>
-      <div class="research-cards">
-        <section class="research-card" id="depth" aria-labelledby="depth-heading">
-          <span class="project-status">Ongoing</span>
-          <h2 id="depth-heading"><a href="/research/depth/">Geometry-Guided Monocular Metric Depth Estimation</a></h2>
-          <p class="project-meta">Doctoral research · Purdue University · Jan 2026–present</p>
-          <p>Exploring how explicit camera geometry can support interpretable metric depth estimation. I designed the framework, implemented a working training pipeline, and curated data for controlled experimentation under a single-A100 compute budget.</p>
-          <div class="project-links"><a href="/research/depth/">View research overview →</a></div>
-        </section>
-        <section class="research-card" id="cidar" aria-labelledby="cidar-heading">
-          <span class="project-status complete">Completed · Semifinal awardee</span>
-          <h2 id="cidar-heading"><a href="/research/cidar/">DARPA CIDAR Challenge</a></h2>
-          <p class="project-meta">Student Project Lead · Purdue University · Jan 2025–Jun 2026</p>
-          <p>Passive long-range ranging under incomplete information. I evaluated competing approaches, collected approximately 1,000 UAV images, tested learning-based prototypes, and developed an explicit geometric baseline. Purdue was one of five semifinal awardees.</p>
-          <div class="project-links"><a href="/research/cidar/">Read the research case study →</a></div>
-        </section>
-        <section class="research-card" id="pupil" aria-labelledby="pupil-heading">
-          <span class="project-status complete">Optics Express · Accepted</span>
-          <h2 id="pupil-heading"><a href="https://stanleychangroup.github.io/WavefrontPupilDesign/" target="_blank" rel="noopener noreferrer">Pupil Design for Computational Wavefront Estimation</a></h2>
-          <p class="project-meta">Optical system design and data acquisition · Purdue University · Jan–Apr 2026</p>
-          <p>Asymmetric pupil designs for wavefront phase recovery. I designed, built, and refined the optical testbed and collected more than 3,000 experimental PSF images, with 2,500 selected for the final experiments.</p>
-          <div class="project-links"><a href="https://stanleychangroup.github.io/WavefrontPupilDesign/" target="_blank" rel="noopener noreferrer">Visit project website ↗</a><a href="https://arxiv.org/abs/2604.00225" target="_blank" rel="noopener noreferrer">Preprint</a></div>
-        </section>
-      </div>
+      <a class="back-link" href="/research/">← All research projects</a>
+      <section class="project" id="depth" aria-labelledby="depth-heading">
+        <h1 id="depth-heading">Geometry-Guided Monocular Metric Depth Estimation</h1>
+        <p class="project-meta">Independent doctoral research · Purdue University · Jan 2026–present · Ongoing</p>
+        <p>Estimating distance in meters from a single RGB image is an ambiguous problem. My doctoral research explores how explicit camera geometry can support interpretable metric depth estimation for robotic and UAV perception.</p>
+        <p><strong>My work.</strong> I designed and implemented the depth-estimation framework and built a training pipeline that produces metric depth maps. I also conduct controlled intervention experiments to understand how intermediate predictions affect the final depth output and use these observations to guide model refinement.</p>
+        <p><strong>Data and experimentation.</strong> I designed a data-curation strategy using approximately 4.72 million TartanAir v2 frames, balancing scene coverage and camera-geometry diversity while reducing redundant observations. Training subsets support iterative experimentation within a single-A100 compute budget.</p>
+        <p><strong>Current progress.</strong> The training pipeline is operational and produces metric depth maps. Model refinement and systematic performance evaluation are ongoing.</p>
+      </section>
     </main>
   </div>
   <footer><div class="wrap">© <span id="year">2026</span> Bole Ma · Last updated: <time datetime="2026-10-06">October 6, 2026</time></div></footer>
