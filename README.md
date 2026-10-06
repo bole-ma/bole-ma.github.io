@@ -12,3 +12,5 @@ This repository contains the source code and data for my personal academic websi
 To test changes locally before pushing to GitHub, ensure you have Ruby and Jekyll installed, then run the startup script:
 ```bash
 bash run_server.sh
+
+<!-- Trigger Pages rebuild: 2026-10-06 -->
