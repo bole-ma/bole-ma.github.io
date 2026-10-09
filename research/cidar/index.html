@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A research case study in passive long-range ranging: method selection, UAV experiments, and explicit geometric assumptions.">
+  <meta name="description" content="Problem setting for the DARPA CIDAR Challenge: passive image-based distance measurement at kilometer ranges.">
   <title>DARPA CIDAR - Bole Ma</title>
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-bm-32.png">
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bole Ma">
   <meta property="og:title" content="DARPA CIDAR - Bole Ma">
-  <meta property="og:description" content="A research case study in passive long-range ranging: method selection, UAV experiments, and explicit geometric assumptions.">
+  <meta property="og:description" content="Problem setting for the DARPA CIDAR Challenge: passive image-based distance measurement at kilometer ranges.">
   <meta property="og:url" content="https://bole-ma.github.io/research/cidar/">
   <meta property="og:image" content="https://bole-ma.github.io/images/social-preview.png">
   <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
   <meta property="og:image:alt" content="Bole Ma, Purdue University — Computer Vision and Geometric Perception">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DARPA CIDAR - Bole Ma">
-  <meta name="twitter:description" content="A research case study in passive long-range ranging: method selection, UAV experiments, and explicit geometric assumptions.">
+  <meta name="twitter:description" content="Problem setting for the DARPA CIDAR Challenge: passive image-based distance measurement at kilometer ranges.">
   <meta name="twitter:image" content="https://bole-ma.github.io/images/social-preview.png">
   <style>
     :root { --text:#3d4145; --heading:#292d31; --muted:#6d747a; --link:#287c9a; --rule:#e6e9eb; }
@@ -90,84 +90,36 @@
   </style>
   <link rel="stylesheet" href="/assets/css/research.css">
   <link rel="stylesheet" href="/assets/css/cidar.css">
+  <link rel="stylesheet" href="/assets/css/depth.css">
 </head>
-<body class="cidar-page">
+<body class="cidar-page depth-page">
   <header class="site-header"><div class="wrap"><a class="site-title" href="/#top">Bole Ma</a><nav class="site-nav" aria-label="Main navigation"><a href="/#about">About</a><a href="/#news">News</a><a href="/#publications">Publications</a><a href="/research/" aria-current="page">Research</a><a href="/#education">Education</a><a href="/cv/">CV</a></nav></div></header>
   <main class="case-wrap">
     <a class="back-link" href="/research/">← Research / Selected projects</a>
     <div class="case-hero">
-      <div>
-        <p class="eyebrow">DARPA CIDAR Challenge</p>
-        <h1>Passive ranging.<br><em>Grounded decisions.</em></h1>
-        <p class="hero-deck">Estimate distance from images when <strong>sensor information is incomplete</strong> and <strong>prediction errors are undisclosed</strong>. I led the search for a workable approach—from method evaluation to field experiments and a geometric baseline.</p>
-      </div>
-      <div class="hero-result">
-        <p class="eyebrow">Team outcome</p>
-        <strong class="result-number">1 of 5</strong>
-        <p>Semifinal awardees<br>DARPA CIDAR Challenge</p>
-        <a href="https://www.darpa.mil/research/challenges/cidar/about" target="_blank" rel="noopener noreferrer">Official announcement ↗</a>
-      </div>
+      <div><p class="eyebrow">DARPA CIDAR Challenge</p><h1>Passive imaging.<br><em>Long-range distance.</em></h1><p class="hero-deck">Estimate the distance to a target from images taken kilometers away, <strong>without emitting light or other signals toward it</strong>. The challenge combines demanding accuracy requirements with incomplete information about the scene and imaging conditions.</p></div>
+      <div class="research-question"><p class="eyebrow">Challenge setting</p><p>2.5–10 km<br>Passive observation<br>Metric distance</p></div>
     </div>
-    <div class="case-byline"><span><strong>Bole Ma</strong> · Student Project Lead</span><span>Purdue University</span><span>Jan 2025–Jun 2026</span></div>
-
-    <section class="case-chapter" aria-labelledby="screen-heading">
-      <div class="chapter-copy"><span class="chapter-number">01 / Evaluate</span><h2 id="screen-heading">Find the route<br>the data can support.</h2><p>I compared candidate methods by their <strong>required inputs and testable assumptions</strong>, then selected metric monocular depth for experiments.</p></div>
-      <div>
-        <dl class="route-ledger">
-          <div class="route-line"><dt>Radiative absorption</dt><dd>Missing spectral, material, and environmental information.<span class="route-verdict">NOT PURSUED</span></dd></div>
-          <div class="route-line"><dt>Stereo / SfM</dt><dd>Unknown baselines, weak parallax, unstable COLMAP trials.<span class="route-verdict">NOT SELECTED</span></dd></div>
-          <div class="route-line selected"><dt>Metric monocular depth</dt><dd>Available pretrained models; transfer to the target setting still unverified.<span class="route-verdict">TAKEN INTO FIELD TESTING →</span></dd></div>
-        </dl>
-      </div>
+    <div class="case-byline"><span><strong>Bole Ma</strong> · Purdue University</span><span>Jan 2025–Jun 2026</span></div>
+    <section class="motivation-row" aria-labelledby="task-heading">
+      <div><span class="chapter-number">01 / The task</span><h2 id="task-heading">Images in.<br>Physical distance out.</h2></div>
+      <dl class="research-practices">
+        <div class="practice"><dt>Available data</dt><dd>Visible and infrared images at different focal lengths, event-camera sequences, and camera specifications including focal length, field of view, and resolution.</dd></div>
+        <div class="practice"><dt>Required output</dt><dd>A numerical distance estimate for each target, expressed in physical units.</dd></div>
+        <div class="practice"><dt>Challenge scale</dt><dd>The published scoring criteria cover 2.5, 5, 7.5, and 10 km. The stated challenge goal is accuracy of ±5 m at 10 km or more, with low computational latency.</dd></div>
+      </dl>
     </section>
-
-    <section class="case-chapter" aria-labelledby="test-heading">
-      <div class="chapter-copy"><span class="chapter-number">02 / Test</span><h2 id="test-heading">Build the evidence<br>that was missing.</h2><p>I earned <strong>FAA Part 107 certification</strong>, collected <strong>≈1,000 UAV images</strong>, completed calibration, and tested pretrained models and a compact U-Net.</p></div>
-      <div>
-        <div class="field-photos">
-          <figure><div class="photo-slot"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.2" aria-hidden="true"><rect x="7" y="10" width="26" height="21" rx="1"/><circle cx="15" cy="17" r="3"/><path d="m8 28 9-7 5 4 5-7 6 9"/></svg><span>Photograph to follow</span></div><figcaption>Fieldwork · operating the UAV</figcaption></figure>
-          <figure><div class="photo-slot"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.2" aria-hidden="true"><rect x="7" y="10" width="26" height="21" rx="1"/><path d="M8 24h24m-17 7 4-7m10 7-4-7"/><rect x="18" y="19" width="7" height="4"/></svg><span>Sample image to follow</span></div><figcaption>Captured scene · farmland and vehicle</figcaption></figure>
-        </div>
-        <p class="field-observation"><strong>The experiment changed the plan.</strong> Pretrained predictions differed from reference measurements; our own data could not cover the required distances and viewpoints within the available budget.</p>
-      </div>
+    <section class="motivation-row" aria-labelledby="difficulty-heading">
+      <div><span class="chapter-number">02 / Why it is difficult</span><h2 id="difficulty-heading">Rich imagery.<br>Incomplete information.</h2></div>
+      <div><p><strong>The cameras do not share exactly the same viewpoint.</strong> Images from different modalities can contain slight parallax, while precise relative camera positions are unavailable.</p><p><strong>Scene and measurement conditions are incompletely characterized.</strong> The information available during the challenge did not fully specify target material properties, spectral response, or environmental conditions.</p><p><strong>Reference distances were unavailable to participants.</strong> Teams submitted predictions, but the feedback available to us did not include per-target reference values or errors.</p></div>
     </section>
-
-    <section class="case-chapter" aria-labelledby="decide-heading">
-      <div class="chapter-copy"><span class="chapter-number">03 / Decide</span><h2 id="decide-heading">Make the assumptions<br>explicit.</h2><p>I implemented a <strong>pinhole-camera baseline</strong> using an assumed target size and measured pixel extent, then averaged estimates across modalities.</p></div>
-      <figure class="geometry">
-        <svg viewBox="0 0 640 205" role="img" aria-labelledby="geometry-title geometry-desc">
-          <title id="geometry-title">Pinhole ranging with an assumed target size</title><desc id="geometry-desc">Two rays connect the ends of a distant target through the camera center to the image plane. The physical target size L and pixel extent l determine depth Z given focal length f. Schematic, not to scale.</desc>
-          <defs><marker id="dimension-arrow" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#76909d" stroke-width="1.3"/></marker></defs>
-          <path d="M32 102H594" stroke="#c6d2d7" stroke-dasharray="4 5"/>
-          <path d="m44 119 90-17 420-78M44 85l90 17 420 78" fill="none" stroke="#527e92" stroke-width="1.5"/>
-          <path d="M44 62v80" stroke="#a6b9c1" stroke-width="1.4"/><path d="M44 85v34" stroke="#295a71" stroke-width="4"/>
-          <path d="M554 24v156" stroke="#295a71" stroke-width="4"/><circle cx="134" cy="102" r="4" fill="#295a71"/>
-          <path d="M582 27v150M137 183h413M47 156h83" stroke="#76909d" marker-start="url(#dimension-arrow)" marker-end="url(#dimension-arrow)"/>
-          <g font-family="Georgia,serif" font-style="italic" fill="#264757"><text x="595" y="108" font-size="24">L</text><text x="23" y="108" font-size="20">l</text><text x="335" y="174" font-size="22">Z</text><text x="85" y="149" font-size="20">f</text></g>
-          <g font-family="Arial,sans-serif" font-size="11" fill="#78888f"><text x="24" y="45">IMAGE</text><text x="112" y="129">CAMERA</text><text x="504" y="12">TARGET</text></g>
-        </svg>
-        <figcaption><span class="equation">Z = f<sub>px</sub> L / l<sub>px</sub></span><span>Size prior + image measurement · schematic, not to scale</span></figcaption>
-      </figure>
+    <section class="motivation-row" aria-labelledby="meaning-heading">
+      <div><span class="chapter-number">03 / Why it matters</span><h2 id="meaning-heading">Distance sensing<br>without active illumination.</h2></div>
+      <div><p>Passive ranging is relevant to perception systems that must observe distant targets without illuminating them. The challenge asks whether image information can support <strong>accurate physical measurements at long range</strong>, under conditions where direct measurement and complete scene information are difficult to obtain.</p></div>
     </section>
-
-    <div class="case-end"><p class="eyebrow">The question I took forward</p><div><p>When the answer is unavailable,<br>what can we still measure and check?</p><a href="/research/depth/">How this informs my current depth research →</a></div></div>
-    <p class="evidence-note">Purdue received $250,000 across white-paper and semifinal awards. Per-target errors were not disclosed; the award does not establish measurement accuracy. Target size, orientation, and camera and pixel measurements remain sources of error.</p>
-      <details class="case-details"><summary>Technical background and method comparison</summary>
-        <p>The official challenge evaluates ranges of 2.5–10 km. I used camera-axis depth as the working quantity; conversion to line-of-sight range requires intrinsics and target image position. These are task specifications, not performance achieved by our submission.</p>
-        <div class="method-table-wrap">
-          <table class="method-table"><caption>Feasibility assessment for this project</caption><thead><tr><th scope="col">Approach</th><th scope="col">Key requirement</th><th scope="col">Obstacle in this setting</th><th scope="col">Decision</th></tr></thead><tbody>
-            <tr><td>Radiative absorption / multispectral ranging</td><td>Radiometric, spectral, environmental, and target-property modeling</td><td>Insufficient characterization; development and calibration costs were difficult to bound</td><td>Not pursued</td></tr>
-            <tr><td>Stereo / SfM</td><td>Usable parallax and recoverable geometry and scale</td><td>Unknown baselines and weak parallax; my COLMAP trials produced unstable reconstructions</td><td>Not selected</td></tr>
-            <tr><td>Relative monocular depth</td><td>An additional metric-scale anchor</td><td>Relative structure alone does not supply absolute target distance</td><td>Not a direct solution</td></tr>
-            <tr><td>Learned metric monocular depth</td><td>Transferable scale and scene priors</td><td>Applicability to distant targets and elevated viewpoints was unverified</td><td>Test experimentally</td></tr>
-          </tbody></table>
-        </div>
-        <p>Relative depth alone does not supply absolute distance. My method screening concerned feasibility with our inputs, rather than ruling out a method in all settings.</p>
-        <p>For the final baseline, averaging can reduce some measurement variability but cannot remove shared target-size bias. No deblurring or lens-distortion correction was applied.</p>
-      </details>
-      <div class="case-references"><a href="https://www.darpa.mil/research/challenges/cidar/resources/rules" target="_blank" rel="noopener noreferrer">Challenge rules</a><a href="https://www.darpa.mil/research/challenges/cidar/about" target="_blank" rel="noopener noreferrer">Official award announcement</a><a href="https://engineering.purdue.edu/ECE/News/2026/purdue-ece-team-advances-in-darpa-imaging-challenge" target="_blank" rel="noopener noreferrer">Purdue News</a></div>
+    <div class="case-references"><a href="https://www.darpa.mil/research/challenges/cidar/resources/rules" target="_blank" rel="noopener noreferrer">Official task requirements</a><a href="https://www.darpa.mil/research/challenges/cidar/about" target="_blank" rel="noopener noreferrer">DARPA challenge background</a></div>
   </main>
-  <footer><div class="wrap">© <span id="year">2026</span> Bole Ma · Last updated: <time datetime="2026-10-06">October 6, 2026</time></div></footer>
+  <footer><div class="wrap">© <span id="year">2026</span> Bole Ma · Last updated: <time datetime="2026-10-08">October 8, 2026</time></div></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

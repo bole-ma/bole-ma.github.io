@@ -1,0 +1,27 @@
+.depth-page .case-hero { grid-template-columns:minmax(0,1fr) 240px; gap:55px; }
+.depth-page .research-question { border-left:1px solid #cfd8da; padding-left:26px; align-self:center; }
+.depth-page .research-question p:last-child { font-family:Georgia,'Times New Roman',serif; font-size:24px; line-height:1.4; color:#375767; margin:0; }
+.depth-page .research-question .eyebrow { margin-bottom:13px; }
+.depth-page .motivation-row { display:grid; grid-template-columns:280px minmax(0,1fr); gap:55px; padding:35px 0; border-bottom:1px solid #dce2e3; }
+.depth-page .motivation-row h2,.depth-page .diagnostic-header h2 { font-family:Georgia,'Times New Roman',serif; font-size:30px; font-weight:400; line-height:1.2; letter-spacing:-.025em; padding:0; border:0; margin:0 0 13px; color:#263a44; }
+.depth-page .motivation-row p { font-size:15px; line-height:1.8; }
+.depth-page .motivation-row p:last-child { margin:0; }
+.depth-page .diagnostic-section { padding:36px 0; margin:0; border-bottom:1px solid #dce2e3; }
+.depth-page .diagnostic-header { display:grid; grid-template-columns:280px minmax(0,1fr); gap:55px; margin-bottom:24px; }
+.depth-page .diagnostic-header p { font-size:15px; line-height:1.8; margin:0; }
+.depth-page .diagnostic-image { margin:0; }
+.depth-page .diagnostic-image img { display:block; width:100%; height:auto; background:#fff; }
+.depth-page .diagnostic-image figcaption { margin-top:12px; font-size:12px; line-height:1.7; color:#697981; max-width:105ch; }
+.depth-page .insight-statement { margin:25px 0 0; font-family:Georgia,'Times New Roman',serif; font-size:24px; color:#294c5d; max-width:70ch; line-height:1.5; }
+.depth-page .research-practices { margin:0; }
+.depth-page .practice { display:grid; grid-template-columns:175px minmax(0,1fr); gap:24px; border-bottom:1px solid #dce2e3; padding:14px 0; }
+.depth-page .practice:first-child { padding-top:0; }
+.depth-page .practice:last-child { border-bottom:0; padding-bottom:0; }
+.depth-page .practice dt { color:#2b4b5b; font-size:15px; font-weight:600; }
+.depth-page .practice dd { margin:0; font-size:14px; line-height:1.75; }
+.depth-page .progress-line { display:flex; flex-wrap:wrap; gap:8px 30px; border-top:1px solid #cfd8da; border-bottom:1px solid #cfd8da; padding:15px 0; margin:25px 0 15px; font-size:13px; }
+.depth-page .progress-line strong { color:#245a81; }
+.depth-page .progress-note { color:#63727a; font-size:13px; max-width:85ch; }
+.depth-page .case-chapter { margin:0; }
+@media(max-width:850px) { .depth-page .case-hero { gap:30px; grid-template-columns:1fr 200px; } .depth-page .motivation-row,.depth-page .diagnostic-header { grid-template-columns:220px 1fr; gap:30px; } .depth-page .practice { grid-template-columns:140px 1fr; gap:15px; } }
+@media(max-width:620px) { .depth-page .case-hero,.depth-page .motivation-row,.depth-page .diagnostic-header { grid-template-columns:1fr; gap:20px; } .depth-page .research-question { border-left:0; padding-left:0; border-top:1px solid #cfd8da; padding-top:19px; } .depth-page .research-question p:last-child { font-size:22px; } .depth-page .practice { grid-template-columns:1fr; gap:5px; } .depth-page .insight-statement { font-size:22px; } }
